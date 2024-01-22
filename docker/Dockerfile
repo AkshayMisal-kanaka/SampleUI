@@ -12,7 +12,7 @@ RUN ng build --configuration production --base-href /fio --deploy-url /fio/ --ou
 
 FROM nginxinc/nginx-unprivileged
 
-#### copy nginx conf
+## copy nginx conf
 #COPY ./config/nginx.conf /etc/nginx/conf.d/default.conf
 COPY docker/nginx/default.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /app/fio /usr/share/nginx/html/fio
