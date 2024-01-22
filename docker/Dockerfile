@@ -4,7 +4,7 @@ WORKDIR /app
 COPY package-lock.json .
 COPY package.json .
 RUN npm ci
-RUN npm install -g @angular/cli@14.2.10
+RUN npm install -g @angular/cli@15.2.6
 COPY . .
 
 # RUN npm run build:ssr
