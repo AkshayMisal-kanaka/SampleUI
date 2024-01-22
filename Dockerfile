@@ -1,4 +1,4 @@
-FROM node:16.20.0-alpine AS build
+FROM node:slim AS build
 
 WORKDIR /app
 COPY package-lock.json .
