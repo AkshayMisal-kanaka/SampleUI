@@ -6,7 +6,7 @@ COPY package.json .
 RUN npm ci
 RUN npm install -g @angular/cli@15.2.6
 COPY . .
-
+ENV GENERATE_SOURCEMAP=false
 # RUN npm run build:ssr
 RUN ng build --configuration production --base-href /fio --deploy-url /fio/ --output-path=fio
 
